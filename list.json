@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Carlin",
+    "age": 27,
+    "city": "Shanghai",
+    "relation": "Family"
+  },
+  {
+    "name": "Cindy",
+    "age": 26,
+    "city": "Lillestrom",
+    "relation": "Family"
+  },
+  {
+    "name": "Sissel",
+    "age": 25,
+    "city": "Lillestrom",
+    "relation": "Family"
+  },
+  {
+    "name": "Gina",
+    "age": 19,
+    "city": "Oslo",
+    "relation": "Family"
+  },
+  {
+    "name": "David",
+    "age": 13,
+    "city": "Oslo",
+    "relation": "Family"
+  },
+  {
+    "name": "Olav",
+    "age": 17,
+    "city": "Oslo",
+    "relation": "Family"
+  },
+  {
+    "name": "Li",
+    "age": 40,
+    "city": "Oslo",
+    "relation": "Family"
+  },
+  {
+    "name": "Viggo",
+    "age": 40,
+    "city": "Oslo",
+    "relation": "Family"
+  },
+  {
+    "name": "Chang",
+    "age": 40,
+    "city": "Oslo",
+    "relation": "Family"
+  },
+  {
+    "name": "Linda",
+    "age": 10,
+    "city": "Oslo",
+    "relation": "Family"
+  },
+  {
+    "name": "Aland",
+    "age": null,
+    "city": "Gjovik",
+    "relation": "Friend"
+  },
+  {
+    "name": "Zaid",
+    "age": 17,
+    "city": "Oslo",
+    "relation": "Friend"
+  },
+  {
+    "name": "Erik",
+    "age": 18,
+    "city": "Gjovik",
+    "relation": "Friend"
+  },
+  {
+    "name": "A",
+    "age": 20,
+    "city": null,
+    "relation": "Friend"
+  },
+  {
+    "name": "B",
+    "age": 20,
+    "city": null,
+    "relation": "Friend"
+  },
+  {
+    "name": "C",
+    "age": 20,
+    "city": null,
+    "relation": "Friend"
+  },
+  {
+    "name": "D",
+    "age": 20,
+    "city": null,
+    "relation": "Friend"
+  },
+  {
+    "name": "E",
+    "age": 20,
+    "city": null,
+    "relation": "Friend"
+  },
+  {
+    "name": "F",
+    "age": 20,
+    "city": null,
+    "relation": "Friend"
+  },
+  {
+    "name": "G",
+    "age": 20,
+    "city": null,
+    "relation": "Friend"
+  }
+
+]

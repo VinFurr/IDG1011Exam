@@ -128,6 +128,41 @@ body{
     }
 /*other...*/
 
+hr{
+  border-top: 7px dotted #a3a3a3;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: none;
+  width: 10%
+}
+
+.home_image{
+  border-radius: 100%;
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: 20px auto 5px auto;
+}
+
+.skill_image_left{
+  max-width: 125px;
+  max-height: 125px;
+  float: left;
+  margin-right: 30px;
+}
+
+.skill_image_right{
+  max-width: 125px;
+  max-height: 125px;
+  float: right;
+  margin-left: 30px;
+}
+.card {
+  padding: 10px;
+  width: 100%;
+
+  min-height: 150px;
+}
 h1{
   font-size: 90px;
   margin: 0;

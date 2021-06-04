@@ -15,7 +15,7 @@
           <li class="blue"><a href="./index.html">Home</a></li>
           <li class="orange"><a href="./list.html">List</a></li>
           <li class="purple"><a href="./quiz.html">Quiz</a></li>
-          <li class="green"><a href="./contact.html">Contact</a></li>-->
+          <li class="green"><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="top_container">
@@ -24,7 +24,21 @@
       </div>
     </div>
     <div class="middle_container">
-
+      <p>Choose</p>
+      <div class="klasseVelger">
+        <div>
+          <input type="radio" id="family" />
+          <label for="family">Family</label>
+        </div>
+        <div>
+          <input type="radio" id="friend" />
+          <label for="friend">Friend</label>
+        </div>
+        <div>
+          <input type="radio" id="all" />
+          <label for="all">Show all</label>
+        </div>
+      <ul class="list"></ul>
     </div>
     <div class="bottom_container">
 
@@ -33,11 +47,59 @@
       <div class="section">
         <p>Exam 4th June 2021 <br>
           IDG1011 Front-end web development</p>
-<p>made by Vincent Sun</p>
+          <p>made by Vincent Sun</p>
       </div>
     </footer>
     <script type="text/javascript">
       RandomMusic();
+
+      var ul = document.querySelector(".list")
+      fetch('list.json')
+          .then(res => res.json())
+          .then(list => {
+              console.log(list)
+
+
+              document.querySelector("input#family").addEventListener("click", function () {
+                  ul.innerHTML=""
+                  list.filter(list => list.relation === "Family").forEach(element => {
+                      var li = document.createElement("li");
+                      li.innerHTML = `
+              <p class= "name">${element.name}</p>
+              <p class= "age">${element.age}</p>
+              <p class= "city">${element.city} </p>
+              <p class= "relation">${element.relation}</p>`
+                      ul.appendChild(li)
+                  });
+              })
+
+              document.querySelector("input#friend").addEventListener("click", function () {
+                  ul.innerHTML=""
+                  list.filter(list => list.relation === "Friend").forEach(element => {
+                      var li = document.createElement("li");
+                      li.innerHTML = `
+                      <p class= "name">${element.name}</p>
+                      <p class= "age">${element.age}</p>
+                      <p class= "city">${element.city} </p>
+                      <p class= "relation">${element.relation}</p>`
+                      ul.appendChild(li)
+                  });
+              })
+
+              document.querySelector("input#all").addEventListener("click", function () {
+                  ul.innerHTML=""
+                  list.forEach(element => {
+                      var li = document.createElement("li");
+                      li.innerHTML = `
+                      <p class= "name">${element.name}</p>
+                      <p class= "age">${element.age}</p>
+                      <p class= "city">${element.city} </p>
+                      <p class= "relation">${element.relation}</p>`
+                      ul.appendChild(li)
+                  });
+              })
+          })
+
     </script>
   </body>
 
