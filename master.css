@@ -168,3 +168,34 @@ h1{
   margin: 0;
   padding-top: 60px;
 }
+
+
+
+/*css below is from assignment 1*/
+label {
+  margin-right: 2em;
+  display: inline-block;
+  width: 18em;
+}
+
+.choosebutton {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list .name {
+  display: inline-block;
+  width: 20em;
+}
+
+.list .studyprogram {
+  display: inline-block;
+  width: 30em;
+}
