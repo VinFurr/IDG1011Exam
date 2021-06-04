@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="icon" href="./image/favicon.ico">
+    <script src="./js/randomMusic.js"></script>
+  </head>
+
+  <body class="contact_text_color contact_background">
+    <div class="contact_top_background">
+      <nav>
+        <ul class="navbar_background">
+          <li class="blue"><a href="./index.html">Home</a></li>
+          <li class="orange"><a href="./list.html">List</a></li>
+          <li class="purple"><a href="./quiz.html">Quiz</a></li>
+          <li class="green"><a href="./contact.html">Contact</a></li>-->
+        </ul>
+      </nav>
+      <div class="top_container">
+        <h1 class="sacramento contact_head_color ">Contact me</h1>
+
+      </div>
+    </div>
+    <div class="middle_container">
+      <form class="" onsubmit="return updateProfile()">
+        <br>
+        <label>
+          First name*:
+          <br>
+          <input type="text" name="fName" value="" id="FN" placeholder="Type your first name here" required>
+          <br>
+        </label><br><br>
+        <label>
+          Last name*:
+          <br>
+          <input type="text" name="lName" value="" id="LN" placeholder="Type your last name here" required>
+          <br>
+        </label><br><br><label>
+          Age:
+          <br>
+          <input type="number" name="age" value="" id="age" placeholder="Your age">
+          <br>
+        </label><br><br><label>
+          Email:
+          <br>
+          <input type="email" name="email" value="" id="email" placeholder="Your e-mail">
+          <br>
+        </label><br><br><label>
+          Address:
+          <br>
+          <input type="text" name="address" value="" id="adr" placeholder="Your address">
+          <br>
+        </label><br><br><label>
+          City:
+          <br>
+          <input type="text" name="city" value="" id="city" placeholder="Your City">
+          <br>
+        </label><br><br><label>
+        </label><label>
+          Message*:<br>
+          <textarea name="message" rows="4" cols="50" id="msg" placeholder="Your message here" required></textarea>
+          <br><br>
+        </label>
+        <input type="submit" name="sub" value="submit to local storage" onclick="" >
+      </form>
+    </div>
+    <div class="bottom_container">
+
+    </div>
+    <footer>
+      <div class="section">
+
+      </div>
+    </footer>
+    <script type="text/javascript">
+      RandomMusic();
+
+
+      class Profile{
+        constructor(){
+          this.fName = document.getElementById("FN").value;
+          this.lName = document.getElementById("LN").value;
+          this.age = document.getElementById("age").value;
+          this.mail = document.getElementById("email").value;
+          this.address = document.getElementById("adr").value;
+          this.city = document.getElementById("city").value;
+          this.message = document.getElementById("msg").value;
+        }
+
+        setProfile(){
+          const fName = this.fName;
+          const lName = this.lName;
+          const age = this.age;
+          const mail = this.mail;
+          const address = this.address;
+          const city = this.city;
+          const message = this.message;
+          this.saveProfile(fName, lName, age, mail, address, city, message);
+        }
+        getProfile(){
+          this.fName = localStorage.getItem("storedFName");
+          this.lName = localStorage.getItem("storedLName");
+          this.age = localStorage.getItem("storedAge");
+          this.mail = localStorage.getItem("storedMail");
+          this.address = localStorage.getItem("storedAddress");
+          this.city = localStorage.getItem("storedCity");
+          this.message = localStorage.getItem("storedMessage");
+        }
+        saveProfile(fName, lName, age, mail, address, city, message){
+          localStorage.setItem("storedFName", fName);
+          localStorage.setItem("storedLName", lName);
+          localStorage.setItem("storedAge", age);
+          localStorage.setItem("storedMail", mail);
+          localStorage.setItem("storedAddress", address);
+          localStorage.setItem("storedCity", city);
+          localStorage.setItem("storedMessage", message);
+        }
+      }
+      //task 4
+      function updateProfile(){
+
+          var myProfile = new Profile();
+          myProfile.setProfile();
+          setProfile();
+          //alert('hello')
+
+      }
+      //task 5
+      function displayProfile(){
+
+      //	var myProfile = new Profile();
+      //	myProfile.getProfile();
+        if (localStorage.getItem("storedFName")){
+          document.getElementById("FN").setAttribute("value", localStorage.getItem("storedFName"));
+          document.getElementById("LN").setAttribute("value", localStorage.getItem("storedLName"));
+          document.getElementById("age").setAttribute("value", localStorage.getItem("storedAge"));
+          document.getElementById("email").setAttribute("value", localStorage.getItem("storedMail"));
+          document.getElementById("adr").setAttribute("value", localStorage.getItem("storedAddress"));
+          document.getElementById("city").setAttribute("value", localStorage.getItem("storedCity"));
+          document.getElementById("msg").innerHTML=(localStorage.getItem("storedMessage"));
+        }
+      }
+      window.onload = function(){displayProfile()}
+    </script>
+  </body>
+
+</html>
